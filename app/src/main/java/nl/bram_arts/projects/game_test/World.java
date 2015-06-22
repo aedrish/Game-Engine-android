@@ -17,16 +17,16 @@ public class World extends GameView {
         super(context);
         startGame();
         if( windowScreen != null) {
-            buildEnvoriment();
+            buildEnvironment();
         }
     }
 
     /**
      * a function to add tiles to the world
      */
-    private void buildEnvoriment() {
+    private void buildEnvironment() {
         try {
-            super.windowScreen.initializeBackgroundList(R.drawable.tilea5_2, 16, 8);
+            super.windowScreen.initializeBackgroundList(R.drawable.tile_sprite, 16, 8);
             ArrayList<Byte[]> map = new ArrayList<>();
 //            Byte[] row1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             Byte[] row1 = {16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16};

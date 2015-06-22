@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public class Window extends View {
 
     /**
      * basic constructor
-     * @param context
+     * @param context of which the game is drawn on
      */
     public Window(Context context) {
         super(context);
@@ -58,14 +57,14 @@ public class Window extends View {
      * Function to initialize an list of tiles based on an image.
      * @param imageId image where the tiles are cropped.
      * @param rows number of rows in the image
-     * @param colums number of colums in the image
+     * @param columns number of columns in the image
      */
-    public void initializeBackgroundList(int imageId, int rows, int colums) {
+    public void initializeBackgroundList(int imageId, int rows, int columns) {
         Bitmap bmp = BitmapFactory.decodeResource(getResources(), imageId);
-        tileWidth = bmp.getWidth() / colums;
+        tileWidth = bmp.getWidth() / columns;
         tileHeight = bmp.getHeight() / rows;
         for (int y = 0; y < rows; y++) {
-            for (int x = 0; x < colums; x++) {
+            for (int x = 0; x < columns; x++) {
                 if(tileHeight > 0 && tileWidth > 0) {
                     Bitmap tile = Bitmap.createBitmap(bmp, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
                     tileList.add(tile);

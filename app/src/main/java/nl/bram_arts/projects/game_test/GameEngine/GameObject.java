@@ -28,7 +28,7 @@ public class GameObject extends View {
 
     /**
      * basic constructor used by the Super View.
-     * @param context
+     * @param context the context on which the game is drawn on.
      */
     public GameObject(Context context) {
         super(context);

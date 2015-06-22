@@ -14,15 +14,15 @@ public class GameView extends View implements Runnable {
     /**
      * Maximum frames per seconds
      */
-    private static int MAX_FPS = 30;
+    private static final int MAX_FPS = 30;
     /**
      * Milliseconds used per frame.
      */
-    static final int MS_PER_FRAME = 1000 / MAX_FPS;
+    private static final int MS_PER_FRAME = 1000 / MAX_FPS;
     /**
      * List of all gameObjects in game.
      */
-    protected ArrayList<GameObject> gameObjects = new ArrayList<>();
+    private ArrayList<GameObject> gameObjects = new ArrayList<>();
     /**
      * Thread where the game is running on.
      */
@@ -32,7 +32,7 @@ public class GameView extends View implements Runnable {
      */
     private boolean gameIsRunning = false;
     /**
-     * context on which the game is drawning on.
+     * context on which the game is drawing on.
      */
     private Context context;
     /**
@@ -42,7 +42,7 @@ public class GameView extends View implements Runnable {
     /**
      * Screen where the tiles are drawn on.
      */
-    protected Window windowScreen;
+    protected final Window windowScreen;
 
     /**
      * constructor for the Game Engine.
@@ -59,7 +59,7 @@ public class GameView extends View implements Runnable {
      * Make a new Thread and set the status of the game to running.
      * Then start the Thread
      */
-    public void startGame() {
+    protected void startGame() {
         gameLoop = new Thread(this);
         gameIsRunning = true;
         gameLoop.start();
@@ -85,7 +85,7 @@ public class GameView extends View implements Runnable {
 
     /**
      * Function to draw the current state of each game object.
-     * @param canvas
+     * @param canvas canvas on which we paint the game objects.
      */
     private void drawGameObjects(Canvas canvas) {
         for(GameObject item: gameObjects) {

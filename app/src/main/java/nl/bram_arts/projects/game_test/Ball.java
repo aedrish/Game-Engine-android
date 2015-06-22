@@ -1,8 +1,5 @@
 package nl.bram_arts.projects.game_test;
 
-/**
- * Created by bram on 21-6-2015.
- */
 import android.content.Context;
 import android.graphics.Canvas;
 
@@ -11,6 +8,7 @@ import nl.bram_arts.projects.game_test.GameEngine.Sprite;
 import nl.bram_arts.projects.game_test.GameEngine.Vector;
 
 /**
+ * Class for a ball object.
  * Created by bram on 29-5-2015.
  */
 public class Ball extends MovableGameObject {
@@ -60,7 +58,7 @@ public class Ball extends MovableGameObject {
     /**
      * Function to calculate the x and y speed based on the balls speed and angle.
      */
-    public void calculateXYSpeed() {
+    private void calculateXYSpeed() {
         int ballSpeed = 5;
         double dx = (Math.cos(direction) * ballSpeed);
         speedX = (int) dx;

@@ -25,7 +25,7 @@ public class MovableGameObject extends GameObject {
      * @param sprite the sprite that is set to this GameObject
      * @param position Vector where the MovableGameObject is first set.
      */
-    public MovableGameObject(Context context, Sprite sprite, Vector position) {
+    protected MovableGameObject(Context context, Sprite sprite, Vector position) {
         super(context, sprite, position);
     }
 

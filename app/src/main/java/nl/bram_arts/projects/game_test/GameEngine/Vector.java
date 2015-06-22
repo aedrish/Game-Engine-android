@@ -1,7 +1,7 @@
 package nl.bram_arts.projects.game_test.GameEngine;
 
 /**
- * Mathamatical Vector class
+ * Mathematical Vector class
  * Created by bram on 21-6-2015.
  */
 public class Vector {
@@ -38,10 +38,10 @@ public class Vector {
     }
 
     /**
-     * Substracts two Vectors
+     * Subtracts two Vectors
      * @param vA first Vector
      * @param vB second Vector
-     * @return substracted Vectors
+     * @return subtracted Vectors
      */
     public Vector substractVector(Vector vA, Vector vB) {
         Vector temp = null;
@@ -91,9 +91,9 @@ public class Vector {
 
     /**
      * is used to calculate the angle of two vectors according to each other.
-     * @param vA
-     * @param vB
-     * @return
+     * @param vA first Vector
+     * @param vB Second Vector
+     * @return a scalar.
      */
     public float dotVector(Vector vA, Vector vB) {
         float scalar;
@@ -105,7 +105,7 @@ public class Vector {
     }
 
     /**
-     * returns the current X positon
+     * returns the current X position
      * @return X
      */
     public float getX() {

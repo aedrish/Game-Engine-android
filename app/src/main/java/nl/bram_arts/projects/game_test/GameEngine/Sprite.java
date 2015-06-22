@@ -51,17 +51,17 @@ public class Sprite {
     }
 
     /**
-     * Initialize the frames based on the bitmap and number of rows and colums.
-     * @param colums
-     * @param rows
+     * Initialize the frames based on the bitmap and number of rows and columns.
+     * @param columns number of columns in the tile image
+     * @param rows number of rows in the tile image.
      */
-    public void setFrames(int rows, int colums) {
+    public void setFrames(int rows, int columns) {
         if(this.bmp != null) {
-            this.frameWidth = this.bmp.getWidth() / colums;
+            this.frameWidth = this.bmp.getWidth() / columns;
             this.frameHeight = this.bmp.getHeight() / rows;
-            numberOfFrames = colums * rows;
+            numberOfFrames = columns * rows;
             for (int y = 0; y < rows; y++) {
-                for (int x = 0; x < colums; x++) {
+                for (int x = 0; x < columns; x++) {
                     Bitmap frame = Bitmap.createBitmap(this.bmp, x * frameWidth, y * frameHeight, frameWidth, frameHeight);
                     frames.add(frame);
                 }
@@ -114,7 +114,7 @@ public class Sprite {
 
     /**
      * set Current frame to the index
-     * @param index
+     * @param index index for the new currentFrame.
      */
     public void setFrame(int index) {
         this.currentFrame = index;
@@ -129,8 +129,8 @@ public class Sprite {
     }
 
     /**
-     * Returns weither the object containts frames
-     * @return
+     * Returns whether the object contains frames
+     * @return the status of the sprite has frames.
      */
     public boolean isHasFrames() {
         return hasFrames;
