@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import java.util.ArrayList;
 
 /**
- *
+ * Sprite class that contain the sprite.
  * Created by bram on 19-6-2015.
  */
 public class Sprite {
@@ -70,10 +70,17 @@ public class Sprite {
         }
     }
 
+    /**
+     * returns the frames
+     * @return frames
+     */
     public ArrayList<Bitmap> getFrames() {
         return this.frames;
     }
 
+    /**
+     * select next frame in the list of frames
+     */
     public void animate() {
         nextFrame();
     }
@@ -105,22 +112,42 @@ public class Sprite {
         }
     }
 
+    /**
+     * set Current frame to the index
+     * @param index
+     */
     public void setFrame(int index) {
         this.currentFrame = index;
     }
 
+    /**
+     * return the current frame
+     * @return currentFrame
+     */
     public int getFrame() {
         return this.currentFrame;
     }
 
+    /**
+     * Returns weither the object containts frames
+     * @return
+     */
     public boolean isHasFrames() {
         return hasFrames;
     }
 
+    /**
+     * Returns the width of each frame.
+     * @return frameWidth
+     */
     public int getFrameWidth() {
         return frameWidth;
     }
 
+    /**
+     * returns the height of each frame.
+     * @return frameHeight
+     */
     public int getFrameHeight() {
         return frameHeight;
     }
